@@ -7,6 +7,8 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
 
+gem 'stylus'
+
 # Instead of locking to 3.0.4, use the local copy mapped to github fork
 # Run this command to configure bundler to use the local fork.
 # bundle config local.will_paginate ~/clients/jetbrains/demo/will_paginate
