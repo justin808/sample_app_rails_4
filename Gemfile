@@ -6,7 +6,16 @@ gem 'rails', '4.0.1'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
-gem 'will_paginate', '3.0.4'
+
+# Instead of locking to 3.0.4, use the local copy mapped to github fork
+# Run this command to configure bundler to use the local fork.
+# bundle config local.will_paginate ~/clients/jetbrains/demo/will_paginate
+# If this command is not run, say for other team members, then they will
+# get the version from github. This is the proper way to fork a public
+# repo for your project.
+
+
+gem 'will_paginate', github: 'justin808/will_paginate', branch: 'railsonmaui-will-paginate'
 gem 'bootstrap-will_paginate', '0.0.9'
 
 group :development, :test do
