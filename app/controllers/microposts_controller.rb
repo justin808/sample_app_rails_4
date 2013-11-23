@@ -12,7 +12,17 @@ class MicropostsController < ApplicationController
       render 'static_pages/home'
     end
   end
-  
+
+  def update
+    if @micropost.update_attributes(micropost_params)
+      flash[:success] = "Micropost updated!"
+      redirect_to root_url
+    else
+      @feed_items = []
+      render 'static_pages/home'
+    end
+  end
+
   def destroy
     @micropost.destroy
     redirect_to root_url
